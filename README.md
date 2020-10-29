@@ -48,33 +48,34 @@ Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en
 tu proyecto.
 Piensa en eso al decidir tu estrategia de trabajo individual y de equipo.
 
+### HTML y CSS
+
+* [ ] [Uso de HTML semántico.](https://developer.mozilla.org/en-US/docs/Glossary/Semantics#Semantics_in_HTML)
+* [ ] Uso de selectores de CSS.
+* [ ] Construir tu aplicación respetando el diseño realizado (maquetación).
+
+### DOM
+
+* [ ] Uso de selectores del DOM.
+* [ ] Manejo de eventos del DOM.
+* [ ] [Manipulación dinámica del DOM.](https://developer.mozilla.org/es/docs/Referencia_DOM_de_Gecko/Introducci%C3%B3n)
+
+### JavaScript
+
+* [ ] Tipos de datos.
+* [ ] Declaración correcta de variables (const & let)
+* [ ] Concatenación de strings.
+* [ ] Uso de condicionales (if-else | switch | operador ternario)
+* [ ] Uso de funciones (parámetros | argumentos | valor de retorno)
+
+### Estructura del código y guía de estilo
+
+* [ ] Uso de identificadores descriptivos (Nomenclatura | Semántica)
+
 ### UX
 
 * [ ] Diseñar la aplicación pensando y entendiendo al usuario.
 * [ ] Crear prototipos para obtener _feedback_ e iterar.
-
-### HTML y CSS
-
-* [ ] Entender y reconocer por qué es importante el HTML semántico.
-* [ ] Identificar y entender tipos de selectores en CSS.
-* [ ] Construir tu aplicación respetando el diseño planeado.
-
-### DOM
-
-* [ ] Entender y reconocer los selectores del DOM.
-* [ ] Manejar eventos del DOM.
-* [ ] Manipular dinámicamente el DOM.
-
-### JavaScript
-
-* [ ] Manipular strings.
-* [ ] Entender el uso de condicionales.
-* [ ] Utilizar funciones.
-* [ ] Conocer la diferencia entre los distintos tipos de variable.
-
-### Buenas prácticas de desarrollo
-
-* [ ] Utilizar identificadores descriptivos (Nomenclatura | Semántica).
 
 ## 4. Consideraciones generales
 
@@ -169,9 +170,9 @@ funciones que sean necesarias para actualizar el resultado en la pantalla (UI).
 
 1. Antes que nada, asegúrate de tener un :pencil: editor de texto en
   condiciones, algo como [Atom](https://atom.io/) o
-  [Code](https://code.visualstudio.com/).
+  [Visual Studio Code](https://code.visualstudio.com/).
 2. Para ejecutar los comandos a continuación necesitarás una :shell:
-  [UNIX Shell](https://github.com/Laboratoria/curricula-js/tree/v2.x/topics/shell),
+  [UNIX Shell](https://es.wikipedia.org/wiki/Shell_de_Unix),
   que es un programita que interpreta líneas de comando (command-line
   interpreter) así como tener [git](https://github.com/Laboratoria/curricula-js/tree/v2.x/topics/scm/01-git)
   instalado. Si usas un sistema operativo "UNIX-like", como GNU/Linux o MacOS,
@@ -208,5 +209,5 @@ funciones que sean necesarias para actualizar el resultado en la pantalla (UI).
 
 * [Metodologías Ágiles](https://www.youtube.com/watch?v=v3fLx7VHxGM)
 * [Scrum en menos de 2 minutos](https://www.youtube.com/watch?v=TRcReyRYIMg)
-* [Scrum en Detalle](https://www.youtube.com/watch?v=nOlwF3HRrAY&t=297s). No
+* [Scrum en Detalle](https://youtu.be/nOlwF3HRrAY). No
   esperamos que hagas todo eso desde este proyecto.
