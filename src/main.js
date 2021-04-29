@@ -3,6 +3,11 @@
 */
 
 function saveName(){
-  let nombre = document.getElementById("name").value;
-  alert(`hola ${nombre}`);
+  const nombreUsuario =  document.getElementById("name").value === null ? 'personita': document.getElementById("name").value;
+  localStorage.setItem("nombre", nombreUsuario);
+}
+
+function getName(){
+  const nombreUsuario =  localStorage.getItem("nombre") === null ? 'personita': localStorage.getItem("nombre");
+  return document.getElementById("name").value=`${nombreUsuario}`;
 }
