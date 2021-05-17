@@ -2,6 +2,18 @@
   Aquí van los estilos
 */
 
+#cup {
+  display: none;
+}
+
+#options {
+  display: none;
+}
+
+#stadium {
+  display: none;
+}
+
 .juegos {
   border: solid 1px;
   margin: 20px;

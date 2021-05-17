@@ -8,12 +8,133 @@
   </head>
   <body>
     <div>
-      <h1>Te doy la bienvenida a la Trivia de Fútbol ⚽</h1>
-      <p>Instrucciónes: escribe tu nombre y selecciona una categoría</p>
-      <input type="text" id="name" name="name" required placeholder="tu nombre">
-      <button id="saveName" onclick="saveName();">Guardar</button>
-      <a class="juegos" href="futbol.html">Copas del mundo 🏆</a>
-      <a class="juegos" href="estadios.html">Estadios de fútbol 🏟️</a>
+      <div id="intro">
+        <h1>Te doy la bienvenida a la Trivia de Fútbol ⚽</h1>
+        <p>Instrucciónes: escribe tu nombre y selecciona una categoría</p>
+        <input type="text" id="name" name="name" required placeholder="tu nombre">
+        <button id="saveName" onclick="saveName();">Guardar</button>
+      </div>
+      <div id="options">
+        <div id="presentacion">
+          <h1>Hola <span id="username"></span> Te doy la bienvenida a la trivia de Fútbol 🏆</h1>
+        </div>
+        <a class="juegos" onclick="showCup();" href="#">Copas del mundo 🏆</a>
+        <a class="juegos" onclick="showStadium();" href="#">Estadios de fútbol 🏟️</a>
+      </div>
+      <div id="cup">
+        <div class="pregunta">
+          <div id="enunciado-1">
+            <p>1. ¿Cuál es el Pais que tiene más copas del mundo?</p>
+          </div>
+          <div id="opciones-1">
+            <input type="radio" id="p1o1" name="p1" value="1" />
+            <label for="contactChoice1">🇦🇷 Argentina</label>
+            <input type="radio" id="p1o2" name="p1" value="2" />
+            <label for="contactChoice2">🇧🇷 Brasil</label>
+            <input type="radio" id="p1o3" name="p1" value="3" />
+            <label for="contactChoice3">🇩🇪 Alemania</label>
+            <input type="radio" id="p1o4" name="p1" value="4" />
+            <label for="contactChoice3">🇫🇷 Francia</label>
+          </div>
+        </div>
+
+        <div class="pregunta">
+          <div id="enunciado-2">
+            <p>2. ¿En dónde se realizó la copa del mundo en 2014?</p>
+          </div>
+          <div id="opciones-2">
+            <input type="radio" id="p2o1" name="p2" value="1" />
+            <label for="contactChoice1">🇧🇷 Brasil</label>
+            <input type="radio" id="p2o2" name="p2" value="2" />
+            <label for="contactChoice2">🇨🇴 Colombia</label>
+            <input type="radio" id="p2o3" name="p2" value="3" />
+            <label for="contactChoice3">🇲🇽 Mexico</label>
+            <input type="radio" id="p2o4" name="p2" value="4" />
+            <label for="contactChoice3">🇷🇺 Rusia</label>
+          </div>
+        </div>
+
+        <div class="pregunta">
+          <div id="enunciado-3">
+            <p>3. ¿Cuál es el único país africano que ha organizado la Copa del Mundo?</p>
+          </div>
+          <div id="opciones-3">
+            <input type="radio" id="p3o1" name="p3" value="1" />
+            <label for="contactChoice1">🇲🇱 Mali</label>
+            <input type="radio" id="p3o2" name="p3" value="2" />
+            <label for="contactChoice2">🇳🇬 Nigeria</label>
+            <input type="radio" id="p3o3" name="p3" value="3" />
+            <label for="contactChoice3">🇿🇦 Sudafrica</label>
+            <input type="radio" id="p3o4" name="p3" value="3" />
+            <label for="contactChoice3">🇪🇬 Egypto</label>
+          </div>
+        </div>
+
+        <div id="enviar-cup">
+          <button type="button" >Enviar 💯 </button>
+          <a class="juegos" onclick="intro();" href="#">Volver 🔙</a>
+          <a class="juegos"  id="clear-cup">Borrar y empezar de nuevo 🧹</a>
+          <a class="juegos" onclick="showStadium();"  href="#">Preguntas de Estadios de fútbol 🏟️</a>
+        </div>
+      </div>
+
+      <div id="stadium">
+        <div class="pregunta">
+          <div id="enunciado-4">
+            <p>1. ¿En qué País se encuentra el estadio la Bombonera?</p>
+          </div>
+          <div id="opciones-4">
+            <input type="radio" id="p4o1" name="p4" value="1" />
+            <label for="contactChoice1">🇲🇽 México</label>
+            <input type="radio" id="p4o2" name="p4" value="2" />
+            <label for="contactChoice2">🇧🇷 Brasil</label>
+            <input type="radio" id="p4o3" name="p4" value="3" />
+            <label for="contactChoice3">🇦🇷 Argentina</label>
+            <input type="radio" id="p4o4" name="p4" value="4" />
+            <label for="contactChoice3">🇨🇴 Colombia</label>
+          </div>
+        </div>
+
+        <div class="pregunta">
+          <div id="enunciado-5">
+            <p>2. ¿En qué País se encuentra el estadio Santiago Bernabeu?</p>
+          </div>
+          <div id="opciones-5">
+            <input type="radio" id="p5o1" name="p5" value="1" />
+            <label for="contactChoice1">🇲🇽 México</label>
+            <input type="radio" id="p5o2" name="p5" value="2" />
+            <label for="contactChoice2">🇺🇸 USA</label>
+            <input type="radio" id="p5o3" name="p5" value="3" />
+            <label for="contactChoice3">🇪🇸 España</label>
+            <input type="radio" id="p5o4" name="p5" value="4" />
+            <label for="contactChoice3">🇨🇱 Chile</label>
+          </div>
+        </div>
+
+        <div class="pregunta">
+          <div id="enunciado-6">
+            <p>3. ¿En qué País se encuentra el estadio Azteca?</p>
+          </div>
+          <div id="opciones-6">
+            <input type="radio" id="p6o1" name="p6" value="1" />
+            <label for="contactChoice1">🇨🇴 Colombia</label>
+            <input type="radio" id="p6o2" name="p6" value="2" />
+            <label for="contactChoice2">🇵🇪 Perú</label>
+            <input type="radio" id="p6o3" name="p6" value="3" />
+            <label for="contactChoice3">🇲🇽 México</label>
+            <input type="radio" id="p6o4" name="p6" value="4" />
+            <label for="contactChoice3">🇨🇱 Chile</label>
+          </div>
+        </div>
+
+        <div id="enviar-stadium">
+          <button type="button" onclick="getCupScore();" >Enviar 💯 </button>
+          <a class="juegos" onclick="intro();" href="#">Volver 🔙</a>
+          <a class="juegos" id="clear-stadium">Borrar y empezar de nuevo 🧹</a>
+          <a class="juegos" onclick="showCup();" href="#">Preguntas copa del mundo 🏆</a>
+        </div>
+      </div>
+
     </div>
     <div id="root"></div>
     <script src="main.js"></script>
