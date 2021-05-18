@@ -55,6 +55,19 @@ const validateRadioButtons = (groupname) => {
   return false;
 }
 
+const calculateFinalScore = (UserAnswers, RealAnswers) => {
+  let score = 0;
+
+  for (let index = 0; index < UserAnswers.length; index++) {
+    if(UserAnswers[index] == RealAnswers[index]){
+      score++;
+    }
+  }
+
+  const scoresMessages = ['0 respuestas, sigue intentando','1 respuesta correcta, conoces algo','2 respuestas, vas por buen camino','3 respuestas, así se hace!'];
+  alert(scoresMessages[score]);
+}
+
 const getCupScore = () => {
 
   if(!validateRadioButtons(document.getElementsByName('p1')) ||
@@ -62,35 +75,32 @@ const getCupScore = () => {
   !validateRadioButtons(document.getElementsByName('p3'))){
     alert('hay preguntas sin responder');
   }else{
-    const answer1 = document.querySelector('input[name="p1"]:checked').value;
-    const answer2 = document.querySelector('input[name="p2"]:checked').value;
-    const answer3 = document.querySelector('input[name="p3"]:checked').value;
+    let UserAnswers = [];
+    UserAnswers.push(document.querySelector('input[name="p1"]:checked').value);
+    UserAnswers.push(document.querySelector('input[name="p2"]:checked').value);
+    UserAnswers.push(document.querySelector('input[name="p3"]:checked').value);
 
-    const answers = [2, 1, 3];
-    let score = 0;
-    if(answer1 == answers[0]){
-      score++;
-    }
-    if(answer2 == answers[1]){
-      score++;
-    }
-    if(answer3 == answers[2]){
-      score++;
-    }
+    const Realanswers = [2, 1, 3];
+    calculateFinalScore(UserAnswers, Realanswers);
 
-    switch (score) {
-      case 0:
-        alert('0 respuestas, sigue intentando');
-      case 1:
-        alert('1 respuesta correcta, conoces algo');
-        break;
-      case 2:
-        alert('2 respuestas, vas por buen camino');
-        break;
-      case 3:
-        alert('3 respuestas, así se hace!');
-        break;
-    }
+  }
+}
+
+const getStadiumScore = () => {
+
+  if(!validateRadioButtons(document.getElementsByName('p4')) ||
+  !validateRadioButtons(document.getElementsByName('p5'))  ||
+  !validateRadioButtons(document.getElementsByName('p6'))){
+    alert('hay preguntas sin responder');
+  }else{
+    let UserAnswers = [];
+    UserAnswers.push(document.querySelector('input[name="p4"]:checked').value);
+    UserAnswers.push(document.querySelector('input[name="p5"]:checked').value);
+    UserAnswers.push(document.querySelector('input[name="p6"]:checked').value);
+
+    const Realanswers = [3, 3, 3];
+    calculateFinalScore(UserAnswers, Realanswers);
+
   }
 }
 
@@ -102,6 +112,11 @@ saveNameBtn.addEventListener('click', () => {
 const cupScoreBtn = document.getElementById('submitCup');
 cupScoreBtn.addEventListener('click', () => {
   getCupScore();
+});
+
+const stadiumScoreBtn = document.getElementById('submitStadium');
+stadiumScoreBtn.addEventListener('click', () => {
+  getStadiumScore();
 });
 
 const introBtn = document.getElementsByClassName('intro');
