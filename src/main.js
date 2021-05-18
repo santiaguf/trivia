@@ -59,7 +59,7 @@ const calculateFinalScore = (UserAnswers, RealAnswers) => {
   let score = 0;
 
   for (let index = 0; index < UserAnswers.length; index++) {
-    if(UserAnswers[index] === RealAnswers[index]){
+    if (RealAnswers[index] === parseInt(UserAnswers[index], 10)) {
       score++;
     }
   }
