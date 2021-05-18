@@ -70,6 +70,11 @@ const showQ1 = () => {
 }
 
 const showCup = () => {
+
+  Array.from( document.querySelectorAll('input[name="p1"]:checked'), input => input.checked = false );
+  Array.from( document.querySelectorAll('input[name="p2"]:checked'), input => input.checked = false );
+  Array.from( document.querySelectorAll('input[name="p3"]:checked'), input => input.checked = false );
+
   document.getElementById('options').style.display = 'none';
   document.getElementById('stadium').style.display = 'none';
   document.getElementById('cup').style.display = 'block';
@@ -77,19 +82,15 @@ const showCup = () => {
 }
 
 const showStadium = () => {
+
+  Array.from( document.querySelectorAll('input[name="p4"]:checked'), input => input.checked = false );
+  Array.from( document.querySelectorAll('input[name="p5"]:checked'), input => input.checked = false );
+  Array.from( document.querySelectorAll('input[name="p6"]:checked'), input => input.checked = false );
+
   document.getElementById('options').style.display = 'none';
   document.getElementById('stadium').style.display = 'block';
   document.getElementById('cup').style.display = 'none';
   showQ4();
-}
-
-const clearRadioButtons = () => {
-  Array.from( document.querySelectorAll('input[name="p1"]:checked'), input => input.checked = false );
-  Array.from( document.querySelectorAll('input[name="p2"]:checked'), input => input.checked = false );
-  Array.from( document.querySelectorAll('input[name="p3"]:checked'), input => input.checked = false );
-  Array.from( document.querySelectorAll('input[name="p4"]:checked'), input => input.checked = false );
-  Array.from( document.querySelectorAll('input[name="p5"]:checked'), input => input.checked = false );
-  Array.from( document.querySelectorAll('input[name="p6"]:checked'), input => input.checked = false );
 }
 
 const validateRadioButtons = (groupname) => {
@@ -183,13 +184,6 @@ const stadiumBtn = document.getElementsByClassName('stadium');
 for(let el of stadiumBtn){
   el.addEventListener('click', () => {
     showStadium();
-  })
-}
-
-const clearBtn = document.getElementsByClassName('clear');
-for(let el of clearBtn){
-  el.addEventListener('click', () => {
-    clearRadioButtons();
   })
 }
 
