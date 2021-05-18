@@ -30,4 +30,6 @@ body {
   background-color: #03a9f4;
   border: solid 1px;
   margin: 30px;
+  padding: 10px;
+  border-radius: 10px;
 }
