@@ -25,16 +25,62 @@ const showIntro = () => {
   document.getElementById('stadium').style.display = 'none';
 }
 
+const showResultStadium = () => {
+  document.getElementById('question6').style.display = 'none';
+  document.getElementById('enviarStadium').style.display = 'block';
+}
+
+const showQ6 = () => {
+  document.getElementById('question5').style.display = 'none';
+  document.getElementById('question6').style.display = 'block';
+}
+
+const showQ5 = () => {
+  document.getElementById('question4').style.display = 'none';
+  document.getElementById('question5').style.display = 'block';
+}
+
+const showQ4 = () => {
+  document.getElementById('question4').style.display = 'block';
+  document.getElementById('question5').style.display = 'none';
+  document.getElementById('question6').style.display = 'none';
+  document.getElementById('enviarStadium').style.display = 'none';
+}
+
+const showResultCup = () => {
+  document.getElementById('question3').style.display = 'none';
+  document.getElementById('enviarCup').style.display = 'block';
+}
+
+const showQ3 = () => {
+  document.getElementById('question2').style.display = 'none';
+  document.getElementById('question3').style.display = 'block';
+}
+
+const showQ2 = () => {
+  document.getElementById('question1').style.display = 'none';
+  document.getElementById('question2').style.display = 'block';
+}
+
+const showQ1 = () => {
+  document.getElementById('question1').style.display = 'block';
+  document.getElementById('question2').style.display = 'none';
+  document.getElementById('question3').style.display = 'none';
+  document.getElementById('enviarCup').style.display = 'none';
+}
+
 const showCup = () => {
   document.getElementById('options').style.display = 'none';
   document.getElementById('stadium').style.display = 'none';
   document.getElementById('cup').style.display = 'block';
+  showQ1();
 }
 
 const showStadium = () => {
   document.getElementById('options').style.display = 'none';
   document.getElementById('stadium').style.display = 'block';
   document.getElementById('cup').style.display = 'none';
+  showQ4();
 }
 
 const clearRadioButtons = () => {
@@ -146,3 +192,33 @@ for(let el of clearBtn){
     clearRadioButtons();
   })
 }
+
+const q1Btn = document.getElementById('q1Btn');
+q1Btn.addEventListener('click', () => {
+  showQ2();
+});
+
+const q2Btn = document.getElementById('q2Btn');
+q2Btn.addEventListener('click', () => {
+  showQ3();
+});
+
+const q3Btn = document.getElementById('q3Btn');
+q3Btn.addEventListener('click', () => {
+  showResultCup();
+});
+
+const q4Btn = document.getElementById('q4Btn');
+q4Btn.addEventListener('click', () => {
+  showQ5();
+});
+
+const q5Btn = document.getElementById('q5Btn');
+q5Btn.addEventListener('click', () => {
+  showQ6();
+});
+
+const q6Btn = document.getElementById('q6Btn');
+q6Btn.addEventListener('click', () => {
+  showResultStadium();
+});
