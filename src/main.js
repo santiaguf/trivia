@@ -26,18 +26,33 @@ const showIntro = () => {
 }
 
 const showResultStadium = () => {
-  document.getElementById('question6').style.display = 'none';
-  document.getElementById('enviarStadium').style.display = 'block';
+
+  if(!validateRadioButtons(document.getElementsByName('p6'))){
+    alert('hay preguntas sin responder');
+  }else{
+    document.getElementById('question6').style.display = 'none';
+    document.getElementById('enviarStadium').style.display = 'block';
+  }
 }
 
 const showQ6 = () => {
-  document.getElementById('question5').style.display = 'none';
-  document.getElementById('question6').style.display = 'block';
+
+  if(!validateRadioButtons(document.getElementsByName('p5'))){
+    alert('hay preguntas sin responder');
+  }else{
+    document.getElementById('question5').style.display = 'none';
+    document.getElementById('question6').style.display = 'block';
+  }
 }
 
 const showQ5 = () => {
-  document.getElementById('question4').style.display = 'none';
-  document.getElementById('question5').style.display = 'block';
+
+  if(!validateRadioButtons(document.getElementsByName('p4'))){
+    alert('hay preguntas sin responder');
+  }else{
+    document.getElementById('question4').style.display = 'none';
+    document.getElementById('question5').style.display = 'block';
+  }
 }
 
 const showQ4 = () => {
@@ -48,18 +63,33 @@ const showQ4 = () => {
 }
 
 const showResultCup = () => {
-  document.getElementById('question3').style.display = 'none';
-  document.getElementById('enviarCup').style.display = 'block';
+
+  if(!validateRadioButtons(document.getElementsByName('p3'))){
+    alert('hay preguntas sin responder');
+  }else{
+    document.getElementById('question3').style.display = 'none';
+    document.getElementById('enviarCup').style.display = 'block';
+  }
 }
 
 const showQ3 = () => {
-  document.getElementById('question2').style.display = 'none';
-  document.getElementById('question3').style.display = 'block';
+
+  if(!validateRadioButtons(document.getElementsByName('p2'))){
+    alert('hay preguntas sin responder');
+  }else{
+    document.getElementById('question2').style.display = 'none';
+    document.getElementById('question3').style.display = 'block';
+  }
 }
 
 const showQ2 = () => {
-  document.getElementById('question1').style.display = 'none';
-  document.getElementById('question2').style.display = 'block';
+
+  if(!validateRadioButtons(document.getElementsByName('p1'))){
+    alert('hay preguntas sin responder');
+  }else{
+    document.getElementById('question1').style.display = 'none';
+    document.getElementById('question2').style.display = 'block';
+  }
 }
 
 const showQ1 = () => {
