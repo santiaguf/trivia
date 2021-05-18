@@ -1,6 +1,10 @@
 /*
   Aquí van los estilos
 */
+body {
+  background-color: rgb(6, 129, 129);;
+
+}
 
 #cup {
   display: none;

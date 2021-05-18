@@ -8,18 +8,18 @@
   </head>
   <body>
     <div>
-      <div id="intro">
+      <div id="intro" class="pregunta">
         <h1>Te doy la bienvenida a la Trivia de Fútbol ⚽</h1>
         <p>Instrucciónes: escribe tu nombre y selecciona una categoría</p>
         <input type="text" id="name" name="name" required placeholder="tu nombre">
-        <button id="saveName" onclick="saveName();">Guardar</button>
+        <a class="juegos" id="saveName" href="#">Guardar</a>
       </div>
-      <div id="options">
+      <div id="options" class="pregunta">
         <div id="presentacion">
           <h1>Hola <span id="username"></span> Te doy la bienvenida a la trivia de Fútbol 🏆</h1>
         </div>
-        <a class="juegos" onclick="showCup();" href="#">Copas del mundo 🏆</a>
-        <a class="juegos" onclick="showStadium();" href="#">Estadios de fútbol 🏟️</a>
+        <a class="juegos cup" href="#">Copas del mundo 🏆</a>
+        <a class="juegos stadium" href="#">Estadios de fútbol 🏟️</a>
       </div>
       <div id="cup">
         <div class="pregunta">
@@ -71,10 +71,10 @@
         </div>
 
         <div id="enviar-cup">
-          <button type="button" >Enviar 💯 </button>
-          <a class="juegos" onclick="intro();" href="#">Volver 🔙</a>
-          <a class="juegos"  id="clear-cup">Borrar y empezar de nuevo 🧹</a>
-          <a class="juegos" onclick="showStadium();"  href="#">Preguntas de Estadios de fútbol 🏟️</a>
+          <a class="juegos" href="#">Enviar 💯</a>
+          <a class="juegos intro" href="#">Volver 🔙</a>
+          <a class="juegos clear"href="#">Borrar y empezar de nuevo 🧹</a>
+          <a class="juegos stadium" href="#">Preguntas de Estadios de fútbol 🏟️</a>
         </div>
       </div>
 
@@ -128,10 +128,10 @@
         </div>
 
         <div id="enviar-stadium">
-          <button type="button" onclick="getCupScore();" >Enviar 💯 </button>
-          <a class="juegos" onclick="intro();" href="#">Volver 🔙</a>
-          <a class="juegos" id="clear-stadium">Borrar y empezar de nuevo 🧹</a>
-          <a class="juegos" onclick="showCup();" href="#">Preguntas copa del mundo 🏆</a>
+          <a class="juegos" href="#">Enviar 💯 </a>
+          <a class="juegos intro" href="#">Volver 🔙</a>
+          <a class="juegos clear" href="#">Borrar y empezar de nuevo 🧹</a>
+          <a class="juegos cup" href="#">Preguntas copa del mundo 🏆</a>
         </div>
       </div>
 
