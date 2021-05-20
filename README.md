@@ -211,3 +211,7 @@ funciones que sean necesarias para actualizar el resultado en la pantalla (UI).
 * [Scrum en menos de 2 minutos](https://www.youtube.com/watch?v=TRcReyRYIMg)
 * [Scrum en Detalle](https://youtu.be/nOlwF3HRrAY). No
   esperamos que hagas todo eso desde este proyecto.
+
+## 9. Boceto trivia
+
+![TRIVIA](trivia.jpeg)
